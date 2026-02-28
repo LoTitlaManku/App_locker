@@ -8,7 +8,7 @@ def main(config, out_name, exe_path):
     apps_list = str([app.strip().lower() for app in apps.split(',')])
     password = config.get('Settings', 'Password', fallback='')
 
-    with open("main.py", "r") as f:
+    with open("base.py", "r") as f:
         content = f.read()
 
     content = content.replace('["REPLACE_APPS"]', apps_list)
